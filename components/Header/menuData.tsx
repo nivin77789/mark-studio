@@ -1,40 +1,17 @@
-// menuData.js
-const menuData = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
+import type { MenuItem } from "./types";
+
+const menuData: MenuItem[] = [
+  { id: 1, title: "Home", path: "/" },
   {
     id: 2,
-    title: "About Us",
-    path: "/about",
+    title: "Services",
+    submenu: [
+      { title: "Wedding", path: "/services/wedding" },
+      { title: "Engagement", path: "/services/engagement" },
+    ],
   },
-  {
-    id: 3,
-    title: "Portfolio",
-    path: "/portfolio",
-  },
-  {
-    id: 4,
-    title: "Experience",
-    path: "/experience",
-  },
-  {
-    id: 5,
-    title: "Collaborations",
-    path: "/collaborations",
-  },
-  {
-    id: 6,
-    title: "Courses",
-    path: "/courses",
-  },
-  {
-    id: 7,
-    title: "Contact",
-    path: "/contact",
-  },
+  { id: 3, title: "About", path: "/about" },
+  { id: 4, title: "Contact", path: "/contact" },
 ];
 
 export default menuData;
